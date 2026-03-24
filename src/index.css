@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #2563eb;
+  --color-primary-foreground: #ffffff;
+}
+
+body {
+  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+@layer components {
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all;
+  }
+  .btn-primary {
+    @apply px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+}
+
+/* Markdown Styles */
+.markdown-body {
+  @apply space-y-4 leading-relaxed;
+}
+.markdown-body h1 {
+  @apply text-2xl font-bold text-slate-900 border-b pb-2 mt-6 mb-4;
+}
+.markdown-body h2 {
+  @apply text-xl font-bold text-slate-800 mt-5 mb-3;
+}
+.markdown-body h3 {
+  @apply text-lg font-semibold text-slate-800 mt-4 mb-2;
+}
+.markdown-body p {
+  @apply text-slate-700;
+}
+.markdown-body ul {
+  @apply list-disc list-inside space-y-1 text-slate-700 mr-4;
+}
+.markdown-body ol {
+  @apply list-decimal list-inside space-y-1 text-slate-700 mr-4;
+}
+.markdown-body li {
+  @apply marker:text-slate-400;
+}
+.markdown-body strong {
+  @apply font-bold text-slate-900;
+}
+.markdown-body blockquote {
+  @apply border-r-4 border-slate-300 pr-4 italic text-slate-600 bg-slate-50 py-2 rounded-l;
+}
+
